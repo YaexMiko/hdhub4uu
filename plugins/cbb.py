@@ -9,12 +9,12 @@ async def cb_handler(client: Bot, query: CallbackQuery):
     data = query.data
     if data == "about":
         await query.message.edit_text(
-                        text = f"<b>○ Creator : <a href='tg://user?id={7328629001}'>Rohit</a>\n○ Language : <code>Python3</code>\n○ Library : <a href='https://docs.pyrogram.org/'>Pyrogram asyncio {__version__}</a>\n○ ᴍʏ ᴜᴘᴅᴀᴛᴇs : <a href='https://t.me/+JFzZgLbzmGNlNjk9'>Backup</a></a>",
+                        text = f"<b>○ Creator : <a href='tg://user?id={5904478052}'>POWEROWNER</a>\n○ Language : <code>Python3</code>\n○ Library : <a href='https://docs.pyrogram.org/'>Pyrogram asyncio {__version__}</a>\n○ ᴍʏ ᴜᴘᴅᴀᴛᴇs : <a href='https://t.me/+MhcwQJ-zeOUyZGQ9'>ᴄʏʙᴇʀᴍᴀᴛʀɪxᴛᴍ</a></a>",
             disable_web_page_preview = True,
             reply_markup = InlineKeyboardMarkup(
                 [
                     [
-                        InlineKeyboardButton("🔒 Close", callback_data = "close")
+                        InlineKeyboardButton("🔒 𝐂𝐥𝐨𝐬𝐞", callback_data = "close")
                     ]
                 ]
             )
@@ -35,7 +35,7 @@ async def cb_handler(client: Bot, query: CallbackQuery):
                         InlineKeyboardButton("Send Payment Screenshot(ADMIN) 📸", url=(SCREENSHOT_URL))
                     ],
                     [
-                        InlineKeyboardButton("🔒 Close", callback_data = "close")
+                        InlineKeyboardButton("🔒 𝐂𝐥𝐨𝐬𝐞", callback_data = "close")
                     ]
                 ]
             )
