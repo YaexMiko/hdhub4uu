@@ -117,7 +117,7 @@ async def start_command(client: Client, message: Message):
                         await snt_msg.delete()  
                     except: 
                         pass    
-                await notification_msg.edit("<b>Your file has been successfully deleted! 😼</b>")  
+                await notification_msg.edit("<b>ʏᴏᴜʀ ғɪʟᴇ ʜᴀs ʙᴇᴇɴ sᴜᴄᴄᴇssғᴜʟʟʏ ᴅᴇʟᴇᴛᴇᴅ! 😼</b>")  
                 return
             if (U_S_E_P):
                 if verify_status['is_verified'] and VERIFY_EXPIRE < (time.time() - verify_status['verified_time']):
@@ -180,7 +180,7 @@ async def start_command(client: Client, message: Message):
                             await snt_msg.delete()  
                         except: 
                             pass    
-                    await notification_msg.edit("<b>Your file has been successfully deleted! 😼</b>")  
+                    await notification_msg.edit("<b>ʏᴏᴜʀ ғɪʟᴇ ʜᴀs ʙᴇᴇɴ sᴜᴄᴄᴇssғᴜʟʟʏ ᴅᴇʟᴇᴛᴇᴅ! 😼</b>")  
                     return
             except:
                     newbase64_string = await encode(f"sav-ory-{_string}")
@@ -194,14 +194,14 @@ async def start_command(client: Client, message: Message):
                     link = await get_shortlink(SHORTLINK_API_URL, SHORTLINK_API_KEY,f'{newLink}')
                     if USE_PAYMENT:
                         btn = [
-                        [InlineKeyboardButton("Click Here 👆", url=link),
-                        InlineKeyboardButton('How to open this link 👆', url=TUT_VID)],
-                        [InlineKeyboardButton("Buy Premium plan", callback_data="buy_prem")]
+                        [InlineKeyboardButton("• ᴄʟɪᴄᴋ ʜᴇʀᴇ •", url=link),
+                        InlineKeyboardButton('• ʜᴏᴡ ᴛᴏ ᴏᴘᴇɴ ᴛʜɪs ʟɪɴᴋ •', url=TUT_VID)],
+                        [InlineKeyboardButton("• ʙᴜʏ ᴘʀᴇᴍɪᴜᴍ ᴘʟᴀɴ •", callback_data="buy_prem")]
                         ]
                     else:
                         btn = [
-                        [InlineKeyboardButton("Click Here 👆", url=link)],
-                        [InlineKeyboardButton('How to open this link 👆', url=TUT_VID)]
+                        [InlineKeyboardButton("• ᴄʟɪᴄᴋ ʜᴇʀᴇ •", url=link)],
+                        [InlineKeyboardButton('• ʜᴏᴡ ᴛᴏ ᴏᴘᴇɴ ᴛʜɪs ʟɪɴᴋ •', url=TUT_VID)]
                         ]
                     await message.reply(f"Total clicks {clicks}. Here is your link 👇.", reply_markup=InlineKeyboardMarkup(btn), protect_content=False, quote=True)
                     return
@@ -218,8 +218,8 @@ async def start_command(client: Client, message: Message):
         reply_markup = InlineKeyboardMarkup(
             [
                 [
-                    InlineKeyboardButton("😊 About Me", callback_data="about"),
-                    InlineKeyboardButton("🔒 Close", callback_data="close")
+                    InlineKeyboardButton("😊 𝐀𝐛𝐨𝐮𝐭 𝐌𝐞", callback_data="about"),
+                    InlineKeyboardButton("🔒 𝐂𝐥𝐨𝐬𝐞", callback_data="close")
                 ]
             ]
         )
@@ -246,16 +246,16 @@ async def start_command(client: Client, message: Message):
             link = await get_shortlink(SHORTLINK_API_URL, SHORTLINK_API_KEY,f'https://telegram.dog/{client.username}?start=verify_{token}')
             if USE_PAYMENT:
                 btn = [
-                [InlineKeyboardButton("Click Here 👆", url=link),
-                InlineKeyboardButton('How to open this link 👆', url=TUT_VID)],
-                [InlineKeyboardButton("Buy Premium plan", callback_data="buy_prem")]
+                [InlineKeyboardButton("• ᴄʟɪᴄᴋ ʜᴇʀᴇ •", url=link),
+                InlineKeyboardButton('• ʜᴏᴡ ᴛᴏ ᴏᴘᴇɴ ᴛʜɪs ʟɪɴᴋ •', url=TUT_VID)],
+                [InlineKeyboardButton("• ʙᴜʏ ᴘʀᴇᴍɪᴜᴍ ᴘʟᴀɴ •", callback_data="buy_prem")]
                 ]
             else:
                 btn = [
-                [InlineKeyboardButton("Click Here 👆", url=link)],
-                [InlineKeyboardButton('How to open this link 👆', url=TUT_VID)]
+                [InlineKeyboardButton("• ᴄʟɪᴄᴋ ʜᴇʀᴇ •", url=link)],
+                [InlineKeyboardButton('• ʜᴏᴡ ᴛᴏ ᴏᴘᴇɴ ᴛʜɪs ʟɪɴᴋ •', url=TUT_VID)]
                 ]
-            await message.reply(f"Your Ads token is expired, refresh your token and try again. \n\nToken Timeout: {get_exp_time(VERIFY_EXPIRE)}\n\nWhat is the token?\n\nThis is an ads token. If you pass 1 ad, you can use the bot for {get_exp_time(VERIFY_EXPIRE)} after passing the ad", reply_markup=InlineKeyboardMarkup(btn), protect_content=False, quote=True)
+            await message.reply(f"ʏᴏᴜʀ ᴀᴅs ᴛᴏᴋᴇɴ ɪs ᴇxᴘɪʀᴇᴅ, ʀᴇғʀᴇsʜ ʏᴏᴜʀ ᴛᴏᴋᴇɴ ᴀɴᴅ ᴛʀʏ ᴀɢᴀɪɴ.\n\nᴛᴏᴋᴇɴ ᴛɪᴍᴇᴏᴜᴛ: {get_exp_time(VERIFY_EXPIRE)}\n\nWhat is the token?\n\nᴛʜɪs ɪs ᴀɴ ᴀᴅs ᴛᴏᴋᴇɴ. ɪғ ʏᴏᴜ ᴘᴀss 1 ᴀᴅ, ʏᴏᴜ ᴄᴀɴ ᴜsᴇ ᴛʜᴇ ʙᴏᴛ ғᴏʀ 24 ʜᴏᴜʀ ᴀғᴛᴇʀ ᴘᴀssɪɴɢ ᴛʜᴇ ᴀᴅ.", reply_markup=InlineKeyboardMarkup(btn), protect_content=False, quote=True)
             return
     return
 
@@ -275,10 +275,10 @@ async def not_joined(client: Client, message: Message):
         buttons = [
         [
             InlineKeyboardButton(
-                "Join Channel 👆",
+                "• ᴊᴏɪɴ ᴄʜᴀɴɴᴇʟ •",
                 url=client.invitelink),
             InlineKeyboardButton(
-                "Join Channel 👆",
+                "• ᴊᴏɪɴ ᴄʜᴀɴɴᴇʟ •",
                 url=client.invitelink2),
         ]
     ]
@@ -286,7 +286,7 @@ async def not_joined(client: Client, message: Message):
         buttons = [
             [
                 InlineKeyboardButton(
-                    "Join Channel 👆",
+                    "• ᴊᴏɪɴ ᴄʜᴀɴɴᴇʟ •",
                     url=client.invitelink)
             ]
         ]
@@ -294,7 +294,7 @@ async def not_joined(client: Client, message: Message):
         buttons.append(
             [
                 InlineKeyboardButton(
-                    text='Try Again 🥺',
+                    text='• ᴛʀʏ ᴀɢᴀɪɴ •',
                     url=f"https://t.me/{client.username}?start={message.command[1]}"
                 )
             ]
@@ -536,7 +536,7 @@ if USE_PAYMENT:
             await message.reply("Premium added! 🤫")
             await client.send_message(
             chat_id=user_id,
-            text=f"Update for you\n\nPremium plan of {timestring} added to your account. 🤫",
+            text=f"Update for you⚡\n\nPremium plan of {timestring} added to your account. 😍",
         )
         except Exception as e:
             print(e)
