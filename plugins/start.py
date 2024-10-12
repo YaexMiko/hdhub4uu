@@ -203,7 +203,7 @@ async def start_command(client: Client, message: Message):
                         [InlineKeyboardButton("• ᴄʟɪᴄᴋ ʜᴇʀᴇ •", url=link)],
                         [InlineKeyboardButton('• ʜᴏᴡ ᴛᴏ ᴏᴘᴇɴ ᴛʜɪs ʟɪɴᴋ •', url=TUT_VID)]
                         ]
-                    await message.reply(f"Total clicks {clicks}. Here is your link 👇.", reply_markup=InlineKeyboardMarkup(btn), protect_content=False, quote=True)
+                    await message.reply(f"ʏᴏᴜʀ ᴀᴅs ᴛᴏᴋᴇɴ ɪs ᴇxᴘɪʀᴇᴅ, ʀᴇғʀᴇsʜ ʏᴏᴜʀ ᴛᴏᴋᴇɴ ᴀɴᴅ ᴛʀʏ ᴀɢᴀɪɴ.\n\nᴛᴏᴋᴇɴ ᴛɪᴍᴇᴏᴜᴛ: {get_exp_time(VERIFY_EXPIRE)}\n\nWhat is the token?\n\nᴛʜɪs ɪs ᴀɴ ᴀᴅs ᴛᴏᴋᴇɴ. ɪғ ʏᴏᴜ ᴘᴀss 1 ᴀᴅ, ʏᴏᴜ ᴄᴀɴ ᴜsᴇ ᴛʜᴇ ʙᴏᴛ ғᴏʀ 24 ʜᴏᴜʀ ᴀғᴛᴇʀ ᴘᴀssɪɴɢ ᴛʜᴇ ᴀᴅ.", reply_markup=InlineKeyboardMarkup(btn), protect_content=False, quote=True)
                     return
     
     for i in range(1):
