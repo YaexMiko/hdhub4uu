@@ -110,7 +110,7 @@ async def start_command(client: Client, message: Message):
                         pass
                 if (SECONDS == 0):
                     return
-                notification_msg = await message.reply(f"<b>🌺 <u>Notice</u> 🌺</b>\n\n<b>This file will be  deleted in {get_exp_time(SECONDS)}. Keep Supporting Us.</b>")
+                notification_msg = await message.reply(f"<b>🌺 <u>Notice</u> 🌺</b>\n\n<b>This file will be  deleted in {get_exp_time(SECONDS)}. Keep Supporting Us📍.</b>")
                 await asyncio.sleep(SECONDS)    
                 for snt_msg in snt_msgs:    
                     try:    
@@ -173,7 +173,7 @@ async def start_command(client: Client, message: Message):
                 if snt_msgs:
                     if (SECONDS == 0):
                         return
-                    notification_msg = await message.reply(f"<b>🌺 <u>Notice</u> 🌺</b>\n\n<b>This file will be  deleted in {get_exp_time(SECONDS)}. Please save or forward it to your saved messages before it gets deleted.</b>")
+                    notification_msg = await message.reply(f"<b>🌺 <u>Notice</u> 🌺</b>\n\n<b>This file will be  deleted in {get_exp_time(SECONDS)}.Keep Supporting Us📍.</b>")
                     await asyncio.sleep(SECONDS)    
                     for snt_msg in snt_msgs:    
                         try:    
