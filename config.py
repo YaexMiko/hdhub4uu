@@ -25,19 +25,19 @@ BOT_STATS_TEXT = os.environ.get("BOTS_STATS_TEXT","<b>BOT UPTIME </b>\n{uptime}"
 USER_REPLY_TEXT = os.environ.get("USER_REPLY_TEXT", "ʜᴍᴍ🤨! ᴅᴏɴ'ᴛ sᴇɴᴅ ᴍᴇ ᴍᴇssᴀɢᴇs ᴅɪʀᴇᴄᴛʟʏ I'ᴍ ᴏɴʟʏ ғɪʟᴇ sʜᴀʀᴇ ʙᴏᴛ! ")
 
 #your bot token here from https://telegram.me/BotFather
-TG_BOT_TOKEN = os.environ.get("TG_BOT_TOKEN", "8018142187:AAHPR1IWS3_gF_OF67EbbTr34FUYzU6R6j0") 
+TG_BOT_TOKEN = os.environ.get("TG_BOT_TOKEN", "8018142187:AAF8oniNjEqqDT5X12Z1Vc-F7JP1xRZ8e38") 
 #your api id from https://my.telegram.org/apps
-APP_ID = int(os.environ.get("APP_ID", "26590590"))
+APP_ID = int(os.environ.get("APP_ID", "22469064"))
 #your api hash from https://my.telegram.org/apps
-API_HASH = os.environ.get("API_HASH", "4805ee1d57b1be7f5135e736c816a2d1")
+API_HASH = os.environ.get("API_HASH", "c05481978a217fdb11fa6774b15cba32")
 #your channel_id from https://t.me/MissRose_bot by forwarding dummy message to rose and applying command `/id` in reply to that message
 CHANNEL_ID = int(os.environ.get("CHANNEL_ID", "-1001992443365"))
 #your id of telegram can be found by https://t.me/MissRose_bot with '/id' command
 OWNER_ID = int(os.environ.get("OWNER_ID", "5904478052"))
 #port set to default 8080
-PORT = os.environ.get("PORT", "8080")
+PORT = os.environ.get("PORT", "6666")
 #your database url mongodb only You can use mongo atlas free cloud database
-DB_URL = os.environ.get("DB_URL", "mongodb+srv://katay57920:wz3U1N6lG8DKsDBx@clusterex.npb0e.mongodb.net/?retryWrites=true&w=majority")
+DB_URL = os.environ.get("DB_URL", "mongodb+srv://rohitplayer87089:rohit870@cluster0.4wt927p.mongodb.net/?retryWrites=true&w=majority")
 #your database name
 DB_NAME = os.environ.get("DB_NAME", "filestorabot")
 
