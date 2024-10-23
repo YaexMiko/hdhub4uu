@@ -16,16 +16,20 @@ admins_lock = Lock()
 # Default verification status
 default_verify = {
     'is_verified': False,
-    'verified_time': "",  # Consistency: empty string instead of 0
+    'verified_time': 60,
     'verify_token': "",
     'link': ""
 }
 
-# Function to create a new user object
 def new_user(id):
     return {
         '_id': id,
-        'verify_status': default_verify  # Reusing default_verify for consistency
+        'verify_status': {
+            'is_verified': False,
+            'verified_time': "",
+            'verify_token': "",
+            'link': ""
+        }
     }
 
 # Links
