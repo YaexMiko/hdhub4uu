@@ -45,7 +45,9 @@ async def present_hash(hash:str):
 
 async def inc_count(hash: str):
     data = await link_data.find_one({'hash': hash})
-    clicks = data.get('clicks')
+    if data is None:
+        return  # or handle accordingly
+    clicks = data.get('clicks', 0)
     await link_data.update_one({'hash': hash}, {'$inc': {'clicks': 1}})
     return
 
@@ -105,3 +107,4 @@ async def full_adminbase():
     user_docs = admin_data.find()
     user_ids = [int(doc['_id']) async for doc in user_docs]
     return user_ids
+
