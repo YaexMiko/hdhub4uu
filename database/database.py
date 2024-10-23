@@ -6,12 +6,12 @@ dbclient = motor.motor_asyncio.AsyncIOMotorClient(DB_URL)
 database = dbclient[DB_NAME]
 
 user_data = database['users']
-admin_data= database['admins']
+admin_data = database['admins']
 link_data = database['links']
 
 default_verify = {
     'is_verified': False,
-    'verified_time': 0,
+    'verified_time': "", # empty string
     'verify_token': "",
     'link': ""
 }
@@ -46,7 +46,7 @@ async def present_hash(hash:str):
 async def inc_count(hash: str):
     data = await link_data.find_one({'hash': hash})
     clicks = data.get('clicks')
-    await link_data.update_one({'hash': hash}, {'$set': {'clicks': clicks+1}})
+    await link_data.update_one({'hash': hash}, {'$inc': {'clicks': 1}})
     return
 
 async def get_clicks(hash: str):
