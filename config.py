@@ -82,7 +82,7 @@ TUT_VID = os.environ.get("TUT_VID","https://t.me/how_to_hentai/22")
 #put TRUE if you want this feature
 USE_PAYMENT = True if (True if os.environ.get("USE_PAYMENT", "TRUE") == "TRUE" else False) and (USE_SHORTLINK) else False
 #UPI ID
-UPI_ID = os.environ.get("UPI_ID", "@Alya_x_Yuki")
+UPI_ID = os.environ.get("UPI_ID", "First Contact Owner To Take Upi Id @Alya_x_Yuki")
 #UPI QR CODE IMAGE
 UPI_IMAGE_URL = os.environ.get("UPI_IMAGE_URL", "")
 #SCREENSHOT URL of ADMIN for verification of payments
