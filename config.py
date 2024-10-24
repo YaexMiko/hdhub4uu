@@ -33,7 +33,7 @@ API_HASH = os.environ.get("API_HASH", "61f150cdca64b2916fa499d107393140")
 #your channel_id from https://t.me/MissRose_bot by forwarding dummy message to rose and applying command `/id` in reply to that message
 CHANNEL_ID = int(os.environ.get("CHANNEL_ID", "-1002019359166"))
 #your id of telegram can be found by https://t.me/MissRose_bot with '/id' command
-OWNER_ID = int(os.environ.get("OWNER_ID", "1707099600"))
+OWNER_ID = int(os.environ.get("OWNER_ID", "6768137528"))
 #port set to default 8080
 PORT = os.environ.get("PORT", "6656")
 #your database url mongodb only You can use mongo atlas free cloud database
