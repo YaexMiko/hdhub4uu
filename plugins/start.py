@@ -491,31 +491,22 @@ async def restart(client, message):
 
 
 if USE_PAYMENT:
-@Bot.on_message(filters.command('add_prem') & filters.private & filters.user(ADMINS))
-async def add_user_premium_command(client: Bot, message: Message):
-    while True:
-        try:
-            user_id_msg = await client.ask(
-                text="Enter id of user 🔢\n /cancel to cancel :",
-                chat_id=message.from_user.id,
-                timeout=60
-            )
-        except Exception as e:
-            print(e)
-            return
-        
-        # Check if the user wants to cancel
-        if user_id_msg.text == "/cancel":
-            await message.reply("Cancelled 😉!")
-            return
-        
-        try:
-            # Attempt to fetch the user to verify the ID
-            await client.get_users(user_ids=user_id_msg.text)
-            break  # Exit the loop if successful
-        except:
-            await message.reply("❌ Error 😖\n\nThe admin id is incorrect.")
-            
+    @Bot.on_message(filters.command('add_prem') & filters.private & filters.user(ADMINS))
+    async def add_user_premium_command(client: Bot, message: Message):
+        while True:
+            try:
+                user_id = await client.ask(text="Enter id of user 🔢\n /cancel to cancel : ",chat_id = message.from_user.id, timeout=60)
+            except Exception as e:
+                print(e)
+                return  
+            if user_id.text == "/cancel":
+                await user_id.edit("Cancelled 😉!")
+                return
+            try:
+                await Bot.get_users(user_ids=user_id.text, self=client)
+                break
+            except:
+                await user_id.edit("❌ Error 😖\n\nThe admin id is incorrect.", quote = True)
                 continue
         user_id = int(user_id.text)
         while True:
