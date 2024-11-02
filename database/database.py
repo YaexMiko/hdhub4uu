@@ -103,5 +103,12 @@ async def del_admin(user_id: int):
 
 async def full_adminbase():
     user_docs = admin_data.find()
-    user_ids = [int(doc['_id']) async for doc in user_docs]
+    user_ids = []
+    async for doc in user_docs:
+        try:
+            user_id = int(doc['_id'])
+            user_ids.append(user_id)
+        except ValueError:
+            # Handle the case where _id is not an integer, for example, log it or skip it
+            print(f"Non-integer admin ID found: {doc['_id']}")
     return user_ids
