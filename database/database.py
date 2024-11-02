@@ -101,6 +101,11 @@ async def del_admin(user_id: int):
     return
 
 async def full_adminbase():
-    user_docs = admin_data.find()
-    user_ids = [int(doc['_id']) async for doc in user_docs]
+    user_docs = admin_data.find()  # Assuming this is an async call
+    user_ids = []  # Initialize an empty list for user IDs
+
+    async for doc in user_docs:  # Use async for to iterate over user_docs
+        user_ids.append(int(doc['_id']))  # Append the integer value of '_id'
+
     return user_ids
+
