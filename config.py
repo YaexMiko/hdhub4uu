@@ -20,12 +20,12 @@ if FORCE_SUB_CHANNEL > FORCE_SUB_CHANNEL2:
     FORCE_SUB_CHANNEL = temp
 
 #bot stats
-BOT_STATS_TEXT = os.environ.get("BOTS_STATS_TEXT","<b>BOT UPTIME </b>\n{uptime}")
+BOT_STATS_TEXT = os.environ.get("BOTS_STATS_TEXT","<b>𝙱𝙾𝚃 𝚄𝙿𝚃𝙸𝙼𝙴 </b>\n{uptime}")
 #send custom message when user interact with bot
-USER_REPLY_TEXT = os.environ.get("USER_REPLY_TEXT", "Don't send me messages directly I'm only File Share bot! ")
+USER_REPLY_TEXT = os.environ.get("USER_REPLY_TEXT", "❌ 𝙿𝚕𝚎𝚊𝚜𝚎 𝙰𝚟𝚘𝚒𝚍 𝙳𝚒𝚛𝚎𝚌𝚝 𝙼𝚎𝚜𝚜𝚊𝚐𝚎𝚜. 𝙸'𝚖 𝚆𝚘𝚛𝚔𝚒𝚗𝚐 𝙵𝚘𝚛 𝙾𝚗𝚕𝚢  @Team_Originals")
 
 #your bot token here from https://telegram.me/BotFather
-TG_BOT_TOKEN = os.environ.get("TG_BOT_TOKEN", "7716433955:AAFzXYzLXq8gdftXoohSRkkfQNSZOSpL11s") 
+TG_BOT_TOKEN = os.environ.get("TG_BOT_TOKEN", "") 
 #your api id from https://my.telegram.org/apps
 APP_ID = int(os.environ.get("APP_ID", "22469064"))
 #your api hash from https://my.telegram.org/apps
@@ -44,7 +44,7 @@ DB_NAME = os.environ.get("DB_NAME", "filestorabot")
 #for creating telegram thread for bot to improve performance of the bot
 TG_BOT_WORKERS = int(os.environ.get("TG_BOT_WORKERS", "4"))
 #your start default command message.
-START_MSG = os.environ.get("START_MESSAGE", "Hello {first}\n\nI can store private files in Specified Channel and other users can access it from special link. ")
+START_MSG = os.environ.get("START_MESSAGE", "𝙷𝚎𝚕𝚕𝚘 {first}\n\n𝙸 𝙲𝚊𝚗 𝚂𝚝𝚘𝚛𝚎 𝙿𝚛𝚒𝚟𝚊𝚝𝚎 𝙵𝚒𝚕𝚎𝚜 𝚒𝚗 𝚂𝚙𝚎𝚌𝚒𝚏𝚒𝚎𝚍 𝙲𝚑𝚊𝚗𝚗𝚎𝚕 𝚊𝚗𝚍 𝚘𝚝𝚑𝚎𝚛 𝚞𝚜𝚎𝚛𝚜 𝚌𝚊𝚗 𝚊𝚌𝚌𝚎𝚜𝚜 𝙿𝚛𝚒𝚟𝚊𝚝𝚎 𝙵𝚒𝚕𝚎𝚜 𝙵𝚛𝚘𝚖 𝚊 𝚂𝚙𝚎𝚌𝚒𝚊𝚕 𝙻𝚒𝚗𝚔....!\n\n𝙿𝚘𝚠𝚎𝚛𝚎𝚍 𝙱𝚢 @Team_Originals 🔥")
 #your telegram tag without @
 OWNER_TAG = os.environ.get("OWNER_TAG", "rohit_1888")
 #Time in seconds for message delete, put 0 to never delete
@@ -89,25 +89,25 @@ UPI_IMAGE_URL = os.environ.get("UPI_IMAGE_URL", "https://envs.sh/B7w.png")
 SCREENSHOT_URL = os.environ.get("SCREENSHOT_URL", f"t.me/{OWNER_TAG}")
 #Time and its price
 #7 Days
-PRICE1 = os.environ.get("PRICE1", "20 rs")
+PRICE1 = os.environ.get("PRICE1", "20")
 #1 Month
-PRICE2 = os.environ.get("PRICE2", "49 rs")
+PRICE2 = os.environ.get("PRICE2", "49")
 #3 Month
-PRICE3 = os.environ.get("PRICE3", "135 rs")
+PRICE3 = os.environ.get("PRICE3", "135")
 #6 Month
-PRICE4 = os.environ.get("PRICE4", "250 rs")
+PRICE4 = os.environ.get("PRICE4", "250")
 #1 Year
-PRICE5 = os.environ.get("PRICE5", "500 rs")
+PRICE5 = os.environ.get("PRICE5", "500")
 
 
 
 #force message for joining the channel
-FORCE_MSG = os.environ.get("FORCE_MSG", "Hello {first}\n\n<b>You need to join in my Channel/Group to use me\n\nKindly Please join Channel</b> 🥺")
+FORCE_MSG = os.environ.get("FORCE_MSG", "𝚂𝚘𝚛𝚛𝚢 𝙳𝚞𝚍𝚎 𝚈𝚘𝚞 𝙽𝚎𝚎𝚍 𝚃𝚘 𝙹𝚘𝚒𝚗 𝚃𝚑𝚎𝚜𝚎 𝙲𝚑𝚊𝚗𝚗𝚎𝚕𝚜</b>\n\n<b>𝚂𝚘 𝙿𝚕𝚎𝚊𝚜𝚎 𝙲𝚕𝚒𝚌𝚔 𝙱𝚕𝚘𝚠 𝚃𝚘 𝙹𝚘𝚒𝚗 𝙲𝚑𝚊𝚗𝚗𝚎𝚕 🔥</b>")
 #custom caption 
-CUSTOM_CAPTION = os.environ.get("CUSTOM_CAPTION", "<b>• ʙʏ @rohit_1888</b>")
+CUSTOM_CAPTION = os.environ.get("CUSTOM_CAPTION", "<b>None</b>")
 #protected content so that no files can be sent from the bot to anyone. recommended False
 # TRUE for yes FALSE if no
-PROTECT_CONTENT = True if os.environ.get("PROTECT_CONTENT", "FALSE") == "TRUE" else False
+PROTECT_CONTENT = True if os.environ.get("PROTECT_CONTENT", "True") == "TRUE" else False
 #used if you dont need buttons on database channel.
 # True for yes False if no
 DISABLE_CHANNEL_BUTTON = True if os.environ.get("DISABLE_CHANNEL_BUTTON", "TRUE") == "TRUE" else False
