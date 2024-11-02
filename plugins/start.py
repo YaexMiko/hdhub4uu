@@ -502,11 +502,7 @@ if USE_PAYMENT:
             if user_id.text == "/cancel":
                 await user_id.edit("Cancelled 😉!")
                 return
-            try:
-                await Bot.get_users(user_ids=user_id.text, self=client)
-                break
-            except:
-                await user_id.edit("❌ Error 😖\n\nThe admin id is incorrect.", quote = True)
+            
                 continue
         user_id = int(user_id.text)
         while True:
