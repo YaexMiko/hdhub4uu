@@ -85,7 +85,7 @@ class Bot(Client):
             ADMINS.append(x)
         await self.send_message(
             chat_id=OWNER_ID,
-            text="Bot has started! 😉"
+            text="𝙼𝚊𝚜𝚝𝚎𝚛 𝚈𝚘𝚞𝚛 𝙱𝚘𝚝 𝙷𝚊𝚜 𝙱𝚎𝚎𝚗 𝚂𝚝𝚊𝚛𝚝𝚎𝚍! 😉"
         )
 
         self.set_parse_mode(ParseMode.HTML)
