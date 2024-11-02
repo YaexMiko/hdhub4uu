@@ -25,7 +25,7 @@ async def batch(client: Client, message: Message):
     while True:
         try:
             second_message = await client.ask(text = "𝙵𝚘𝚛𝚠𝚊𝚛𝚍 𝚃𝚑𝚎 𝙻𝚊𝚜𝚝 𝙼𝚎𝚜𝚜𝚊𝚐𝚎 𝙵𝚛𝚘𝚖 𝙳𝙱 𝙲𝚑𝚊𝚗𝚗𝚎𝚕 ⏩ (𝚠𝚒𝚝𝚑 𝚀𝚞𝚘𝚝𝚎𝚜)..\n𝙾𝚛 𝚂𝚎𝚗𝚍 𝚃𝚑𝚎 𝙳𝙱 𝙲𝚑𝚊𝚗𝚗𝚎𝚕 𝙿𝚘𝚜𝚝 𝙻𝚒𝚗𝚔\n𝚄𝚜𝚎 /sbatch 𝙵𝚘𝚛 𝚂𝚝𝚘𝚙𝚙𝚒𝚗𝚐.", chat_id = message.from_user.id, filters=(filters.forwarded | (filters.text & ~filters.forwarded)), timeout=60)
-        except:yb 
+        except:
             return
         if second_message.text == "/sbatch":
             return
