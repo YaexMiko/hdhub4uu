@@ -85,11 +85,11 @@ class Bot(Client):
             ADMINS.append(x)
         await self.send_message(
             chat_id=OWNER_ID,
-            text="𝙼𝚊𝚜𝚝𝚎𝚛 𝚈𝚘𝚞𝚛 𝙱𝚘𝚝 𝙷𝚊𝚜 𝙱𝚎𝚎𝚗 𝚂𝚝𝚊𝚛𝚝𝚎𝚍."
+            text="Bot has started! 😉"
         )
 
         self.set_parse_mode(ParseMode.HTML)
-        self.LOGGER(__name__).info(f"𝙱𝚘𝚝 𝙼𝚊𝚍𝚎 𝙱𝚢 @𝚈𝚊𝚎_𝚇_𝙼𝚒𝚔𝚘")
+        self.LOGGER(__name__).info(f"Bot made by @rohit_1888!")
         self.username = usr_bot_me.username
 
 
@@ -101,4 +101,4 @@ class Bot(Client):
 
     async def stop(self, *args):
         await super().stop()
-        self.LOGGER(__name__).info("𝙱𝚘𝚝 𝚂𝚝𝚘𝚙𝚙𝚎𝚍 𝙲𝚘𝚗𝚝𝚊𝚌𝚝 @𝚈𝚊𝚎_𝚇_𝙼𝚒𝚔𝚘")
+        self.LOGGER(__name__).info("Bot stopped.contact @rohit_1888")
