@@ -63,6 +63,11 @@ async def add_user(user_id: int):
     await user_data.insert_one(user)
     return
 
+async def add_prem(user_id: int):
+    user = new_user(user_id)
+    await user_data.insert_one(user)
+    return
+
 async def db_verify_status(user_id):
     user = await user_data.find_one({'_id': user_id})
     if user:
