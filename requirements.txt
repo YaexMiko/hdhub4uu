@@ -4,7 +4,7 @@ TgCrypto
 pyromod==1.5
 python-dotenv
 # --- For-Database ------------ #
-pymongo
+pymongo==2.3.45
 motor
 umongo
 marshmallow
