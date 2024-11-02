@@ -208,7 +208,7 @@ async def start_command(client: Client, message: Message):
                         [InlineKeyboardButton("•𝙲𝚕𝚒𝚌𝚔 𝙷𝚎𝚛𝚎•", url=link)],
                         [InlineKeyboardButton('•𝙷𝚘𝚠 𝚃𝚘 𝙾𝚙𝚎𝚗 𝚃𝚑𝚒𝚜 𝙻𝚒𝚗𝚔•', url=TUT_VID)]
                     ]
-                await message.reply(f"𝚃𝚘𝚝𝚊𝚕 𝙲𝚕𝚒𝚌𝚔𝚜 {clicks}. 𝙷𝚎𝚛𝚎 𝙸𝚜 𝚈𝚘𝚞𝚛 𝚅𝚎𝚛𝚒𝚏𝚢 𝙻𝚒𝚗𝚔 👇.", reply_markup=InlineKeyboardMarkup(btn), protect_content=False, quote=True)
+                await message.reply(f"𝚃𝚘𝚝𝚊𝚕 𝙲𝚕𝚒𝚌𝚔𝚜 {clicks}. 𝙷𝚎𝚛𝚎 𝙸𝚜 𝚈𝚘𝚞𝚛 𝚅𝚎𝚛𝚒𝚏𝚢 𝙻𝚒𝚗𝚔 👇.\n\n𝚈𝚘𝚞𝚛 𝙰𝚍𝚜 𝚃𝚘𝚔𝚎𝚗 𝙸𝚜 𝙴𝚡𝚙𝚒𝚛𝚎𝚍, 𝚁𝚎𝚏𝚛𝚎𝚜𝚑 𝚈𝚘𝚞𝚛 𝚃𝚘𝚔𝚎𝚗 𝙰𝚗𝚍 𝚃𝚛𝚢 𝙰𝚐𝚊𝚒𝚗.", reply_markup=InlineKeyboardMarkup(btn), protect_content=False, quote=True)
                 return
 
     for i in range(1):
