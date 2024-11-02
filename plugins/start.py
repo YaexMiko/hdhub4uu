@@ -490,6 +490,7 @@ async def restart(client, message):
         print(e)
 
 
+
 if USE_PAYMENT:
     @Bot.on_message(filters.command('add_prem') & filters.private & filters.user(ADMINS))
     async def add_user_premium_command(client: Bot, message: Message):
@@ -542,3 +543,5 @@ if USE_PAYMENT:
             print(e)
             await message.reply("Some error occurred.\nCheck logs.. 😖\nIf you got premium added message then its ok.")
         return
+
+        
