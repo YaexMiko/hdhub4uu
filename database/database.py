@@ -1,3 +1,4 @@
+
 import motor.motor_asyncio
 from config import ADMINS, DB_URL, DB_NAME
 
@@ -101,11 +102,16 @@ async def del_admin(user_id: int):
     return
 
 async def full_adminbase():
-    user_docs = admin_data.find()  # Assuming this is an async call
-    user_ids = []  # Initialize an empty list for user IDs
-
-    async for doc in user_docs:  # Use async for to iterate over user_docs
-        user_ids.append(int(doc['_id']))  # Append the integer value of '_id'
-
+    user_docs = admin_data.find()
+    user_ids = []
+    async for doc in user_docs:
+        try:
+            user_id = int(doc['_id'])
+            user_ids.append(user_id)
+        except ValueError:
+            # Handle non-integer IDs if necessary
+            pass
     return user_ids
 
+# Example usage (to be called within an async function or event loop)
+# initadmin = await full_adminbase()
