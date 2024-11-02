@@ -37,11 +37,11 @@ async def start_command(client: Client, message: Message):
             if "verify_" in message.text:
                 _, token = message.text.split("_", 1)
                 if verify_status['verify_token'] != token:
-                    return await message.reply("Your token is invalid or Expired ⌛. Try again by clicking /start")
+                    return await message.reply("𝚈𝚘𝚞𝚛 𝚃𝚘𝚔𝚎𝚗 𝙸𝚜 𝙸𝚗𝚟𝚊𝚕𝚒𝚍 𝙾𝚛 𝙴𝚡𝚙𝚒𝚛𝚎𝚍 ⌛. 𝚃𝚛𝚢 𝚊𝚐𝚊𝚒𝚗 𝚋𝚢 𝚌𝚕𝚒𝚌𝚔𝚒𝚗𝚐 /start\n\n𝙸𝚏 𝚃𝚑𝚒𝚜 𝙸𝚜 𝙷𝚊𝚙𝚙𝚎𝚗𝚒𝚗𝚐 𝙰𝚐𝚊𝚒𝚗 𝙰𝚗𝚍 𝙰𝚐𝚊𝚒𝚗 𝚃𝚑𝚊𝚗 𝙲𝚘𝚗𝚝𝚎𝚌𝚝 @Orignal_Owner_bot")
                 await update_verify_status(id, is_verified=True, verified_time=time.time())
                 if verify_status["link"] == "":
                     reply_markup = None
-                await message.reply(f"Your token successfully verified and valid for: {get_exp_time(VERIFY_EXPIRE)} ⏳", reply_markup=reply_markup, protect_content=False, quote=True)
+                await message.reply(f"𝚈𝚘𝚞𝚛 𝚃𝚘𝚔𝚎𝚗 𝚂𝚞𝚌𝚌𝚎𝚜𝚜𝚏𝚞𝚕𝚕𝚢 𝚅𝚎𝚛𝚒𝚏𝚒𝚎𝚍 𝙰𝚗𝚍 𝚅𝚊𝚕𝚒𝚍 𝙵𝚘𝚛: {get_exp_time(VERIFY_EXPIRE)} ⏳", reply_markup=reply_markup, protect_content=False, quote=True)
 
     if len(message.text) > 7:
         for i in range(1):
@@ -87,11 +87,11 @@ async def start_command(client: Client, message: Message):
                         ids = [int(int(argument[3]) / abs(client.db_channel.id))]
                     except:
                         return
-                temp_msg = await message.reply("Please wait... 🫷")
+                temp_msg = await message.reply("𝙿𝚕𝚎𝚊𝚜𝚎 𝚆𝚊𝚒𝚝 𝙼𝚛/𝙼𝚒𝚜𝚜... 🫷")
                 try:
                     messages = await get_messages(client, ids)
                 except:
-                    await message.reply_text("Something went wrong..! 🥲")
+                    await message.reply_text("𝚂𝚘𝚖𝚎𝚝𝚑𝚒𝚗𝚐 𝚆𝚎𝚗𝚝 𝚆𝚛𝚘𝚗𝚐..! 🥲")
                     return
                 await temp_msg.delete()
                 snt_msgs = []
@@ -114,14 +114,14 @@ async def start_command(client: Client, message: Message):
                         pass
                 if SECONDS == 0:
                     return
-                notification_msg = await message.reply(f"<b>🌺 <u>Notice</u> 🌺</b>\n\n<b>This file will be deleted in {get_exp_time(SECONDS)}. Please save or forward it to your saved messages before it gets deleted.</b>")
+                notification_msg = await message.reply(f"<b>🌺 <u>𝙽𝚘𝚝𝚒𝚌𝚎</u> 🌺</b>\n\n<b>𝚃𝚑𝚒𝚜 𝙵𝚒𝚕𝚎 𝚆𝚒𝚕𝚕 𝙱𝚎 𝙳𝚎𝚕𝚎𝚝𝚎𝚍 𝙸𝚗 {get_exp_time(SECONDS)}.</b>")
                 await asyncio.sleep(SECONDS)    
                 for snt_msg in snt_msgs:    
                     try:    
                         await snt_msg.delete()  
                     except: 
                         pass    
-                await notification_msg.edit("<b>Your file has been successfully deleted! 😼</b>")  
+                await notification_msg.edit("<b>𝚈𝚘𝚞𝚛 𝙵𝚒𝚕𝚎 𝙷𝚊𝚜 𝙱𝚎𝚎𝚗 𝚂𝚞𝚌𝚌𝚎𝚜𝚜𝚏𝚞𝚕𝚕𝚢 𝙳𝚎𝚕𝚎𝚝𝚎𝚍! 😼</b>")  
                 return
             if U_S_E_P:
                 if verify_status['is_verified'] and VERIFY_EXPIRE < (time.time() - verify_status['verified_time']):
@@ -149,11 +149,11 @@ async def start_command(client: Client, message: Message):
                         ids = [int(int(argument[1]) / abs(client.db_channel.id))]
                     except:
                         return
-                temp_msg = await message.reply("Please wait... 🫷")
+                temp_msg = await message.reply("𝙿𝚕𝚎𝚊𝚜𝚎 𝚆𝚊𝚒𝚝 𝙼𝚛/𝙼𝚒𝚜𝚜... 🫷")
                 try:
                     messages = await get_messages(client, ids)
                 except:
-                    await message.reply_text("Something went wrong..! 🥲")
+                    await message.reply_text("𝚂𝚘𝚖𝚎𝚝𝚑𝚒𝚗𝚐 𝚆𝚎𝚗𝚝 𝚆𝚛𝚘𝚗𝚐..! 🥲")
                     return
                 await temp_msg.delete()
                 snt_msgs = []
@@ -178,14 +178,14 @@ async def start_command(client: Client, message: Message):
                 if snt_msgs:
                     if SECONDS == 0:
                         return
-                    notification_msg = await message.reply(f"<b>🌺 <u>Notice</u> 🌺</b>\n\n<b>This file will be deleted in {get_exp_time(SECONDS)}. Please save or forward it to your saved messages before it gets deleted.</b>")
+                    notification_msg = await message.reply(f"<b>🌺 <u>𝙽𝚘𝚝𝚒𝚌𝚎</u> 🌺</b>\n\n<b>𝚃𝚑𝚒𝚜 𝙵𝚒𝚕𝚎 𝚆𝚒𝚕𝚕 𝙱𝚎 𝙳𝚎𝚕𝚎𝚝𝚎𝚍 𝙸𝚗{get_exp_time(SECONDS)}.</b>")
                     await asyncio.sleep(SECONDS)    
                     for snt_msg in snt_msgs:    
                         try:    
                             await snt_msg.delete()  
                         except: 
                             pass    
-                    await notification_msg.edit("<b>Your file has been successfully deleted! 😼</b>")  
+                    await notification_msg.edit("<b>𝚈𝚘𝚞𝚛 𝙵𝚒𝚕𝚎 𝙷𝚊𝚜 𝙱𝚎𝚎𝚗 𝚂𝚞𝚌𝚌𝚎𝚜𝚜𝚏𝚞𝚕𝚕𝚢 𝙳𝚎𝚕𝚎𝚝𝚎𝚍! 😼</b>")  
                     return
             except:
                 newbase64_string = await encode(f"sav-ory-{_string}")
@@ -199,16 +199,16 @@ async def start_command(client: Client, message: Message):
                 link = await get_shortlink(SHORTLINK_API_URL, SHORTLINK_API_KEY, f'{newLink}')
                 if USE_PAYMENT:
                     btn = [
-                        [InlineKeyboardButton("Click Here 👆", url=link),
-                         InlineKeyboardButton('How to open this link 👆', url=TUT_VID)],
-                        [InlineKeyboardButton("Buy Premium plan", callback_data="buy_prem")]
+                        [InlineKeyboardButton("•𝙲𝚕𝚒𝚌𝚔 𝙷𝚎𝚛𝚎•", url=link),
+                         InlineKeyboardButton('•𝙷𝚘𝚠 𝚃𝚘 𝙾𝚙𝚎𝚗 𝚃𝚑𝚒𝚜 𝙻𝚒𝚗𝚔•', url=TUT_VID)],
+                        [InlineKeyboardButton("•𝙱𝚞𝚢 𝙿𝚛𝚎𝚖𝚒𝚞𝚖 𝙿𝚕𝚊𝚗•", callback_data="buy_prem")]
                     ]
                 else:
                     btn = [
-                        [InlineKeyboardButton("Click Here 👆", url=link)],
-                        [InlineKeyboardButton('How to open this link 👆', url=TUT_VID)]
+                        [InlineKeyboardButton("•𝙲𝚕𝚒𝚌𝚔 𝙷𝚎𝚛𝚎•", url=link)],
+                        [InlineKeyboardButton('•𝙷𝚘𝚠 𝚃𝚘 𝙾𝚙𝚎𝚗 𝚃𝚑𝚒𝚜 𝙻𝚒𝚗𝚔•', url=TUT_VID)]
                     ]
-                await message.reply(f"Total clicks {clicks}. Here is your link 👇.", reply_markup=InlineKeyboardMarkup(btn), protect_content=False, quote=True)
+                await message.reply(f"𝚃𝚘𝚝𝚊𝚕 𝙲𝚕𝚒𝚌𝚔𝚜 {clicks}. 𝙷𝚎𝚛𝚎 𝙸𝚜 𝚈𝚘𝚞𝚛 𝚅𝚎𝚛𝚒𝚏𝚢 𝙻𝚒𝚗𝚔 👇.", reply_markup=InlineKeyboardMarkup(btn), protect_content=False, quote=True)
                 return
 
     for i in range(1):
@@ -223,8 +223,8 @@ async def start_command(client: Client, message: Message):
         reply_markup = InlineKeyboardMarkup(
             [
                 [
-                    InlineKeyboardButton("😊 About Me", callback_data="about"),
-                    InlineKeyboardButton("🔒 Close", callback_data="close")
+                    InlineKeyboardButton("😊 𝙰𝚋𝚘𝚞𝚝 𝙼𝚎", callback_data="about"),
+                    InlineKeyboardButton("🔒 𝙲𝚕𝚘𝚜𝚎", callback_data="close")
                 ]
             ]
         )
@@ -252,14 +252,14 @@ async def start_command(client: Client, message: Message):
             link = await get_shortlink(SHORTLINK_API_URL, SHORTLINK_API_KEY, f'https://telegram.dog/{client.username}?start=verify_{token}')
             if USE_PAYMENT:
                 btn = [
-                    [InlineKeyboardButton("Click Here 👆", url=link),
-                     InlineKeyboardButton('How to open this link 👆', url=TUT_VID)],
-                    [InlineKeyboardButton("Buy Premium plan", callback_data="buy_prem")]
+                    [InlineKeyboardButton("•𝙲𝚕𝚒𝚌𝚔 𝙷𝚎𝚛𝚎•", url=link),
+                     InlineKeyboardButton('•𝙷𝚘𝚠 𝚃𝚘 𝙾𝚙𝚎𝚗 𝚃𝚑𝚒𝚜 𝙻𝚒𝚗𝚔•', url=TUT_VID)],
+                    [InlineKeyboardButton("•𝙱𝚞𝚢 𝙿𝚛𝚎𝚖𝚒𝚞𝚖 𝙿𝚕𝚊𝚗•", callback_data="buy_prem")]
                 ]
             else:
                 btn = [
-                    [InlineKeyboardButton("Click Here 👆", url=link)],
-                    [InlineKeyboardButton('How to open this link 👆', url=TUT_VID)]
+                    [InlineKeyboardButton("•𝙲𝚕𝚒𝚌𝚔 𝙷𝚎𝚛𝚎•", url=link)],
+                    [InlineKeyboardButton('•𝙷𝚘𝚠 𝚃𝚘 𝙾𝚙𝚎𝚗 𝚃𝚑𝚒𝚜 𝙻𝚒𝚗𝚔•', url=TUT_VID)]
                 ]
             await message.reply(f"Your Ads token is expired, refresh your token and try again. \n\nToken Timeout: {get_exp_time(VERIFY_EXPIRE)}\n\nWhat is the token?\n\nThis is an ads token. If you pass 1 ad, you can use the bot for {get_exp_time(VERIFY_EXPIRE)} after passing the ad", reply_markup=InlineKeyboardMarkup(btn), protect_content=False, quote=True)
             return
@@ -279,10 +279,10 @@ async def not_joined(client: Client, message: Message):
         buttons = [
         [
             InlineKeyboardButton(
-                "Join Channel 👆",
+                "𝙹𝚘𝚒𝚗 𝙲𝚑𝚊𝚗𝚗𝚎𝚕",
                 url=client.invitelink),
             InlineKeyboardButton(
-                "Join Channel 👆",
+                "𝙹𝚘𝚒𝚗 𝙲𝚑𝚊𝚗𝚗𝚎𝚕",
                 url=client.invitelink2),
         ]
     ]
@@ -290,7 +290,7 @@ async def not_joined(client: Client, message: Message):
         buttons = [
             [
                 InlineKeyboardButton(
-                    "Join Channel 👆",
+                    "𝙹𝚘𝚒𝚗 𝙲𝚑𝚊𝚗𝚗𝚎𝚕",
                     url=client.invitelink)
             ]
         ]
@@ -323,7 +323,7 @@ async def not_joined(client: Client, message: Message):
 @Bot.on_message(filters.command('ch2l') & filters.private)
 async def gen_link_encoded(client: Bot, message: Message):
     try:
-        hash = await client.ask(text="Enter the code here... \n /cancel to cancel the operation",chat_id = message.from_user.id, timeout=60)
+        hash = await client.ask(text="Enter The Code Here... \n /cancel to cancel the operation",chat_id = message.from_user.id, timeout=60)
     except Exception as e:
         print(e)
         await hash.reply(f"😔 some error occurred {e}")
