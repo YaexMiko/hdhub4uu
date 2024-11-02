@@ -79,14 +79,22 @@ class Bot(Client):
             sys.exit()
         
         initadmin = await full_adminbase()
-        for x in initadmin:
-            if x in ADMINS:
-                continue
-            ADMINS.append(x)
-        await self.send_message(
-            chat_id=OWNER_ID,
-            text="Bot has started! 😉"
-        )
+
+# Use a set for faster membership testing
+existing_admins = set(ADMINS)
+
+for x in initadmin:
+    if x not in existing_admins:
+        ADMINS.append(x)  # Append only new IDs
+
+try:
+    await self.send_message(
+        chat_id=OWNER_ID,
+        text="Bot has started! 😉"
+    )
+except Exception as e:
+    print(f"Error sending message: {e}")  # Handle any potential errors
+
 
         self.set_parse_mode(ParseMode.HTML)
         self.LOGGER(__name__).info(f"Bot made by @rohit_1888!")
