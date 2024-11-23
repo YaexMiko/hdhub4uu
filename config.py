@@ -31,7 +31,7 @@ APP_ID = int(os.environ.get("APP_ID", "20071888"))
 #your api hash from https://my.telegram.org/apps
 API_HASH = os.environ.get("API_HASH", "1c4cb9d94b23282abd9ae2a87a521b53")
 #your channel_id from https://t.me/MissRose_bot by forwarding dummy message to rose and applying command `/id` in reply to that message
-CHANNEL_ID = int(os.environ.get("CHANNEL_ID", "-1002372093367"))
+CHANNEL_ID = int(os.environ.get("CHANNEL_ID", "-1002294546846"))
 #your id of telegram can be found by https://t.me/MissRose_bot with '/id' command
 OWNER_ID = int(os.environ.get("OWNER_ID", "6943832981"))
 #port set to default 8080
@@ -115,7 +115,7 @@ DISABLE_CHANNEL_BUTTON = True if os.environ.get("DISABLE_CHANNEL_BUTTON", "TRUE"
 
 try:
     ADMINS=[]
-    for x in (os.environ.get("ADMINS", "6943832981").split()):
+    for x in (os.environ.get("ADMINS", "6943832981 7350721166").split()):
         ADMINS.append(int(x))
 except ValueError:
         raise Exception("Your Admins list does not contain valid integers.")
